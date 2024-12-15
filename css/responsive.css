@@ -13,6 +13,19 @@
 
 }
 
+@media (max-width: 1440px){
+
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        height: 540px;
+        overflow: hidden;
+        top: 100px;
+    }
+
+}
+
+
 
 @media (max-width: 1024px){
 
@@ -116,6 +129,23 @@
         width: 100px;
     }
 
+    .carousel-item img {
+        width: 100%;
+        height: 20vh;
+        object-fit: cover;
+        transform: scale(1);
+        transition: transform 1s ease-out;
+        transition: 1s;
+    }
+    
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        height: 215px;
+        overflow: hidden;
+        top: 85px;
+    }
+    
     .product-card {
         background-color: white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -140,14 +170,6 @@
         display: flex;
         gap: 5px;
         justify-content: left;
-    }
-
-    .carousel-container {
-        position: relative;
-        width: 100%;
-        height: 530px;
-        overflow: hidden;
-        top: 85px;
     }
 
     #imagen-1 {
@@ -296,6 +318,8 @@
         text-align: center;
         font-size: 30px;
     }
+
+    
     
 }
 
