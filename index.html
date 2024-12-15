@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda de suplementos deportivos para mejorar tu rendimiento físico. Encuentra todo lo que necesitas para tus entrenamientos.">
+    <title>Suplementos Deportivos</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Lato:wght@900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,700;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_cart" />    
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Lato:wght@900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- Navbar -->
+     <nav> 
+        <div class="nav-1">
+            <img class="imagen-1" src="img/2.png" alt="">
+        </div>
+        <div class="nav-2">
+            <div class="search-container">
+                <input type="text" placeholder="Buscar productos..." id="search-input">
+                <button class="btn-buscar" onclick="searchProduct()">
+                    <img width="20" height="20" src="img/lupa.png" alt="search-more"/>
+                </button>
+            </div>
+            <a class="dnone" href="#about">Acerca de</a>
+            <a class="dnone" href="#products">Productos</a>
+            <a href="javascript:void(0);" id="cart-button" onclick="toggleCart()">
+                <span class="material-symbols-outlined">shopping_cart</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item">
+                <img class="dos" src="img/Banner_Creapure_Mob_3.webp" alt="Imagen 1">
+                <div class="text">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/fondo_video_campana.webp" alt="Imagen 2">
+                <div class="text">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/DtqaXPEXQAERgC1.jpg" alt="Imagen 3">
+                <div class="text">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="ver-mas" onclick="scrollDown()">Ver más...</button>
+    
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2 class="text-1">Suplementos para llevar tu entrenamiento al siguiente nivel</h2>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <h2 class="text-2">Acerca de Nosotros</h2>
+        <p class="f-2" style="font-size: 15px;">En nuestra tienda ofrecemos los mejores suplementos deportivos para ayudarte a alcanzar tus metas físicas. Ya sea que estés buscando aumentar tu masa muscular, mejorar tu rendimiento o acelerar la recuperación, tenemos productos de alta calidad.</p>
+    </div>
+
+    <!-- Products Section -->
+    <div id="products">
+        <h2 style="color: black; padding-top: 30px; padding-bottom: 20px; text-align: center;">Nuestros Productos</h2>
+        <div class="products">
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <img class="img-producto" src="img/TMWP1lb-Ch.webp" alt="Proteína Whey">
+                <h3>Proteína Whey</h3>
+                <p style="color: black;">La mejor proteína para aumentar masa muscular.</p>
+                <p class="text-3"><strong>$29.99</strong></p>
+                <button class="btn-buy" data-name="Proteína Whey" data-price="29.99">Comprar</button>
+            </div>
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <img src="img/Creatina_Micronizada_neutra.webp" alt="Creatina Micronizada">
+                <h3>Creatina Micronizada</h3>
+                <p style="color: black;">Mejora el rendimiento físico.</p>
+                <p class="text-3"><strong>$19.99</strong></p>
+                <button class="btn-buy" data-name="Creatina Micronizada" data-price="19.99">Comprar</button>
+            </div>
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <img src="img/ProteinBarFr.webp" alt="Protein Bar">
+                <h3>Protein Bar</h3>
+                <p style="color: black;">Barra energética de proteína.</p>
+                <p class="text-3"><strong>$2.99</strong></p>
+                <button class="btn-buy" data-name="Protein Bar" data-price="2.99">Comprar</button>
+            </div>
+            <div class="product-card">
+                <img class="img-producto" src="img/Umass3kg-Va.webp" alt="Proteína Whey">
+                <h3>Ultra Mass</h3>
+                <p style="color: black;">La mejor proteína para aumentar masa muscular.</p>
+                <p class="text-3"><strong>$29.99</strong></p>
+                <button class="btn-buy" data-name="Proteína Whey" data-price="29.99">Comprar</button>
+            </div>
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <img src="img/Wxpro1lb-Ch.webp" alt="Creatina Micronizada">
+                <h3>Whey X-PRO</h3>
+                <p style="color: black;">Mejora el rendimiento físico.</p>
+                <p class="text-3"><strong>$19.99</strong></p>
+                <button class="btn-buy" data-name="Creatina Micronizada" data-price="19.99">Comprar</button>
+            </div>
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <img src="img/CsportFp_0a7f4e6e-b8a7-4654-ac13-a91f1891d979.webp" alt="Protein Bar">
+                <h3>Colageno</h3>
+                <p style="color: black;">Para mejor apariencia muscular.</p>
+                <p class="text-3"><strong>$2.99</strong></p>
+                <button class="btn-buy" data-name="Protein Bar" data-price="2.99">Comprar</button>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- Carrito de Compras -->
+     <div id="cart" class="cart">
+        <div class="cart-header">
+            <h2 style="color: black;">Carrito de Compras</h2>
+            <button class="dnone" onclick="toggleCart()">Cerrar</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- Los productos se agregarán aquí -->
+        </div>
+        <div id="cart-total">
+            <h3>Total: $<span id="total-price">$39.98</span></h3>
+            <div class="line"></div>
+            <h3 id="shipping-cost">Costo de envío: <span>$5.00</span></>
+            <div class="line"></div>
+            <h3>Total con envío: $<span id="total-with-shipping">$44.98</span></h3>
+            <button id="checkout-button" class="btn-buy" onclick="initiateCheckout()">Finalizar Compra</button>
+        </div>        
+    </div>
+
+    <script>
+let cartItems = []; // Array que guardará los productos en el carrito
+let cartIsOpen = false; // Variable para saber si el carrito está abierto o no
+
+// Función para mostrar u ocultar el carrito
+function toggleCart() {
+    const cart = document.getElementById('cart');
+    cart.style.display = (cartIsOpen) ? 'none' : 'block'; // Si está abierto, lo cerramos. Si está cerrado, lo mostramos.
+    cartIsOpen = !cartIsOpen; // Invertimos el estado del carrito
+}
+
+// Función para añadir un producto al carrito
+function addToCart(name, price, imageUrl) {
+    const item = {
+        name: name,
+        price: parseFloat(price),
+        imageUrl: imageUrl
+    };
+
+    cartItems.push(item); // Agregamos el producto al carrito
+    updateCart(); // Actualizamos el carrito
+
+    if (!cartIsOpen) {
+        toggleCart(); // Abrimos el carrito solo si no está abierto
+    }
+}
+
+// Función para eliminar un producto del carrito
+function removeFromCart(index) {
+    cartItems.splice(index, 1); // Eliminar el producto en el índice especificado
+    updateCart(); // Actualizamos el carrito después de eliminar el producto
+}
+
+// Función para actualizar el carrito
+function updateCart() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    cartItemsContainer.innerHTML = ''; // Limpiamos el contenedor del carrito
+
+    let total = 0;
+
+    // Creamos una fila para cada producto
+    cartItems.forEach((item, index) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('cart-item');
+
+        // Añadimos la imagen, nombre y precio del producto al carrito
+        itemDiv.innerHTML = `
+            <img src="${item.imageUrl}" alt="${item.name}">
+            <div class="cart-item-details">
+                <h3><strong>${item.name}</strong></h3> <!-- Nombre del producto -->
+                <h3>$${item.price.toFixed(2)}</h3> <!-- Precio del producto -->
+            </div>
+            <button class="btn-remove" onclick="removeFromCart(${index})">Eliminar</button> <!-- Botón de eliminar -->
+        `;
+        cartItemsContainer.appendChild(itemDiv);
+        total += item.price;
+    });
+
+    // Agregar el costo de envío
+    const shippingCost = 5;
+    const totalWithShipping = total + shippingCost;
+
+    // Actualizar el total en la interfaz
+    document.getElementById('total-price').textContent = total.toFixed(2);
+    document.getElementById('total-with-shipping').textContent = totalWithShipping.toFixed(2);
+}
+
+// Función para integrar con Mercado Pago (checkout)
+function initiateCheckout() {
+    const total = cartItems.reduce((acc, item) => acc + item.price, 0);
+    const shippingCost = 5;
+    const totalWithShipping = total + shippingCost;
+
+    // Aquí creamos la preferencia de pago en Mercado Pago
+    fetch('https://api.mercadopago.com/checkout/preferences', {
+        method: 'POST',
+        headers: {
+            'Authorization': 'Bearer YOUR_ACCESS_TOKEN', // Reemplaza con tu Access Token
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            items: cartItems.map(item => ({
+                title: item.name,
+                quantity: 1,
+                unit_price: item.price
+            })),
+            back_urls: {
+                success: 'https://www.tusitio.com/success',
+                failure: 'https://www.tusitio.com/failure',
+                pending: 'https://www.tusitio.com/pending'
+            },
+            auto_return: 'approved',
+            notification_url: 'https://www.tusitio.com/ipn' // URL para recibir notificaciones de pago
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Redirigir al usuario al checkout de Mercado Pago
+        const mpCheckoutUrl = data.init_point;
+        window.location.href = mpCheckoutUrl;
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+// Agregar evento a los botones de comprar
+document.querySelectorAll('.btn-buy').forEach(button => {
+    button.addEventListener('click', (event) => {
+        const productName = event.target.getAttribute('data-name');
+        const productPrice = event.target.getAttribute('data-price');
+        const productImage = event.target.closest('.product-card').querySelector('img').src;
+        addToCart(productName, productPrice, productImage);
+    });
+});
+
+// Cerrar el carrito cuando se hace clic fuera de él (excepto en el botón de "Comprar" o "Eliminar")
+document.addEventListener('click', function(event) {
+    const cart = document.getElementById('cart');
+    const buyButton = event.target.closest('.btn-buy');
+    const removeButton = event.target.closest('.btn-remove');
+    
+    // Si el clic fue fuera del carrito, y no se hizo clic en un botón de "Comprar" ni en "Eliminar"
+    if (!cart.contains(event.target) && !buyButton && !removeButton) {
+        cart.style.display = 'none'; // Cerrar el carrito
+        cartIsOpen = false; // Cambiar el estado del carrito a cerrado
+    }
+});
+
+
+
+
+    </script>
+
+    <div id="seccion-1">
+        <h2>Promociones Especiales</h2>
+        <p>Aprovecha nuestras ofertas exclusivas y obtén productos de alta calidad a precios increíbles.</p>
+    </div>
+
+<!-- Promociones Section -->
+<div id="offers">
+
+
+    <div class="offers-container">
+        <!-- Imagen 1 -->
+        <div class="offer">
+            <div class="image-container">
+                <img class="Imagen" src="img/Banners_Campana_Whey_Banner_copia_9.webp" alt="Promoción 1">
+                <div class="overlay">
+                    <h3 class="f-1">¡Compra 2 y lleva el 3ro gratis!</h3>
+                    <p class="f-1">Compra cualquier suplemento y obtén otro gratis de igual o menor valor.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Imagen 2 -->
+        <div class="offer">
+            <div class="image-container">
+                <img class="Imagen" src="img/star_nutrition_caffeine_200mg_banner_fisicalzone_web1-2189008898870c284516845979672520-1024-1024.png" alt="Promoción 2">
+                <div class="overlay">
+                    <h3 class="f-1">Envío gratuito en compras superiores a $50</h3>
+                    <p class="f-1">Recibe tu pedido sin costo de envío por compras superiores a $50.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Imagen 3 -->
+        <div class="offer">
+            <div class="image-container">
+                <img class="Imagen" src="img/Banner_Creapure_Mob_3.webp" alt="Promoción 3">
+                <div class="overlay">
+                    <h3 class="f-1">Descuento del 20% en tu primera compra</h3>
+                    <p class="f-1">Obtén un 20% de descuento al registrarte en nuestro sitio.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <a href="https://wa.me/1234567890" id="whatsapp-button" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" id="whatsapp-icon"/>
+      </a>
+
+      <div style="max-width: 100%;">
+
+        <section id="imagen-1">
+
+        </section>
+  
+  
+        <!-- Testimonios Section -->
+<div id="testimonials">
+    <h2>Testimonios</h2>
+    <div class="testimonial-container">
+        <div class="testimonial-card">
+            <img src="img/photo-1502877828070-33b167ad6860.avif" alt="Foto de Juan Pérez" class="profile-pic">
+            <div class="testimonial-text">
+                <p>"Desde que empecé a usar estos suplementos, mi rendimiento ha mejorado mucho. ¡Recomiendo 100%!"</p>
+                <p><strong>Juan Pérez</strong></p>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <img src="img/photo-1534119768988-c496213eff76.avif" alt="Foto de María González" class="profile-pic">
+            <div class="testimonial-text">
+                <p>"Excelente atención al cliente y los productos son de la más alta calidad. Me siento mucho mejor durante mis entrenamientos."</p>
+                <p><strong>María González</strong></p>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  <div id="imagen-2">
+  
+  </div>
+  
+  
+  <!-- Suplementación Guía Section -->
+  <!-- Guía de Suplementación Section -->
+<div id="guide">
+    <h2>Guía de Suplementación</h2>
+    <p>¿No estás seguro de qué suplemento elegir? Aquí te dejamos una guía rápida:</p>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3 style="color: white;">Proteínas</h3>
+                <p>Para ganar masa muscular.</p>
+                <img src="img/proteina.png" alt="Proteínas" class="timeline-icon">
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3 style="color: white;">Creatina</h3>
+                <p>Mejora el rendimiento durante entrenamientos de alta intensidad.</p>
+                <img src="img/proteina.png" alt="Creatina" class="timeline-icon">
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3 style="color: white;">Pre-entrenos</h3>
+                <p>Aumenta la energía y la concentración.</p>
+                <img src="img/proteina.png" alt="Pre-entrenos" class="timeline-icon">
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3 style="color: white;">Aminoácidos</h3>
+                <p>Ayuda en la recuperación muscular.</p>
+                <img src="img/proteina.png" alt="Aminoácidos" class="timeline-icon">
+            </div>
+        </div>
+    </div>
+</div>
+  
+  
+<footer>
+    <div class="footer-section">
+        <h2>Acerca de Roca</h2>
+        <p>Somos una marca de suplementos deportivos comprometida con la calidad y la satisfacción de nuestros clientes.</p>
+    </div>
+
+    <div class="footer-section class1">
+        <h2 class="title-class">Menú</h2>
+        <nav class="nav-class">
+            <ul class="menu-list">
+                <li class="menu-item"><a class="link-class" href="#">Contacto Roca</a></li>
+                <li class="menu-item"><a class="link-class" href="#">Compras Mayoristas</a></li>
+                <li class="menu-item"><a class="link-class" href="#">Quiero ser Influencer</a></li>
+                <li class="menu-item"><a class="link-class" href="#">Reportar Problema de Calidad</a></li>
+                <li class="menu-item"><a class="link-class" href="#">Botón de Arrepentimiento</a></li>
+                <li class="menu-item"><a class="link-class" href="#">Política de Privacidad</a></li>
+                <li class="menu-item"><a class="link-class" href="#">Términos y Condiciones</a></li>
+                <li class="menu-item"><a class="link-class" href="#">Preguntas Frecuentes</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="footer-section" id="form-novedades">
+        <h2>Novedades</h2>
+        <p>Deja tu correo electrónico para recibir ofertas y novedades.</p>
+        <form action="#" method="post">
+            <input type="email" placeholder="Tu email" required>
+            <button type="submit">Suscribir</button>
+        </form>
+    </div>
+
+    <div class="footer-section social-media">
+        <h2 style="margin-bottom: 0px;">Síguenos</h2>
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+            <path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"></path><path fill="#fff" d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z"></path>
+            </svg></a>
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+            <radialGradient id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fd5"></stop><stop offset=".328" stop-color="#ff543f"></stop><stop offset=".348" stop-color="#fc5245"></stop><stop offset=".504" stop-color="#e64771"></stop><stop offset=".643" stop-color="#d53e91"></stop><stop offset=".761" stop-color="#cc39a4"></stop><stop offset=".841" stop-color="#c837ab"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path><radialGradient id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2" cx="11.786" cy="5.54" r="29.813" gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4168c9"></stop><stop offset=".999" stop-color="#4168c9" stop-opacity="0"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path><path fill="#fff" d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"></path><circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle><path fill="#fff" d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"></path>
+            </svg></a>
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+            <path fill="#212121" fill-rule="evenodd" d="M10.904,6h26.191C39.804,6,42,8.196,42,10.904v26.191 C42,39.804,39.804,42,37.096,42H10.904C8.196,42,6,39.804,6,37.096V10.904C6,8.196,8.196,6,10.904,6z" clip-rule="evenodd"></path><path fill="#ec407a" fill-rule="evenodd" d="M29.208,20.607c1.576,1.126,3.507,1.788,5.592,1.788v-4.011 c-0.395,0-0.788-0.041-1.174-0.123v3.157c-2.085,0-4.015-0.663-5.592-1.788v8.184c0,4.094-3.321,7.413-7.417,7.413 c-1.528,0-2.949-0.462-4.129-1.254c1.347,1.376,3.225,2.23,5.303,2.23c4.096,0,7.417-3.319,7.417-7.413L29.208,20.607L29.208,20.607 z M30.657,16.561c-0.805-0.879-1.334-2.016-1.449-3.273v-0.516h-1.113C28.375,14.369,29.331,15.734,30.657,16.561L30.657,16.561z M19.079,30.832c-0.45-0.59-0.693-1.311-0.692-2.053c0-1.873,1.519-3.391,3.393-3.391c0.349,0,0.696,0.053,1.029,0.159v-4.1 c-0.389-0.053-0.781-0.076-1.174-0.068v3.191c-0.333-0.106-0.68-0.159-1.03-0.159c-1.874,0-3.393,1.518-3.393,3.391 C17.213,29.127,17.972,30.274,19.079,30.832z" clip-rule="evenodd"></path><path fill="#fff" fill-rule="evenodd" d="M28.034,19.63c1.576,1.126,3.507,1.788,5.592,1.788v-3.157 c-1.164-0.248-2.194-0.856-2.969-1.701c-1.326-0.827-2.281-2.191-2.561-3.788h-2.923v16.018c-0.007,1.867-1.523,3.379-3.393,3.379 c-1.102,0-2.081-0.525-2.701-1.338c-1.107-0.558-1.866-1.705-1.866-3.029c0-1.873,1.519-3.391,3.393-3.391 c0.359,0,0.705,0.056,1.03,0.159V21.38c-4.024,0.083-7.26,3.369-7.26,7.411c0,2.018,0.806,3.847,2.114,5.183 c1.18,0.792,2.601,1.254,4.129,1.254c4.096,0,7.417-3.319,7.417-7.413L28.034,19.63L28.034,19.63z" clip-rule="evenodd"></path><path fill="#81d4fa" fill-rule="evenodd" d="M33.626,18.262v-0.854c-1.05,0.002-2.078-0.292-2.969-0.848 C31.445,17.423,32.483,18.018,33.626,18.262z M28.095,12.772c-0.027-0.153-0.047-0.306-0.061-0.461v-0.516h-4.036v16.019 c-0.006,1.867-1.523,3.379-3.393,3.379c-0.549,0-1.067-0.13-1.526-0.362c0.62,0.813,1.599,1.338,2.701,1.338 c1.87,0,3.386-1.512,3.393-3.379V12.772H28.095z M21.635,21.38v-0.909c-0.337-0.046-0.677-0.069-1.018-0.069 c-4.097,0-7.417,3.319-7.417,7.413c0,2.567,1.305,4.829,3.288,6.159c-1.308-1.336-2.114-3.165-2.114-5.183 C14.374,24.749,17.611,21.463,21.635,21.38z" clip-rule="evenodd"></path>
+            </svg></a>
+    </div>
+</footer>
+
+
+
+</body>
+
+<script>
+    function searchProduct() {
+        const query = document.getElementById('search-input').value;
+        alert('Buscando: ' + query);
+        // Aquí puedes implementar la lógica de búsqueda real si lo deseas.
+    }
+</script>
+
+<script>
+let currentIndex = 0;
+let items = document.querySelectorAll('.carousel-item');
+
+function nextSlide() {
+    // Remover la clase de zoom-out y texto de la imagen anterior
+    items[currentIndex].classList.remove('zoom-out');
+    const currentText = items[currentIndex].querySelector('.text');
+    currentText.style.opacity = 0;
+    currentText.style.transform = 'translateY(50px)';
+
+    // Avanzar a la siguiente imagen
+    if (currentIndex < items.length - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+
+    // Agregar la clase de zoom-out a la nueva imagen
+    items[currentIndex].classList.add('zoom-out');
+    updateCarousel();
+    animateText();
+}
+
+function prevSlide() {
+    // Remover la clase de zoom-out y texto de la imagen anterior
+    items[currentIndex].classList.remove('zoom-out');
+    const currentText = items[currentIndex].querySelector('.text');
+    currentText.style.opacity = 0;
+    currentText.style.transform = 'translateY(50px)';
+
+    // Retroceder a la imagen anterior
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = items.length - 1;
+    }
+
+    // Agregar la clase de zoom-out a la nueva imagen
+    items[currentIndex].classList.add('zoom-out');
+    updateCarousel();
+    animateText();
+}
+
+function updateCarousel() {
+    const carousel = document.querySelector('.carousel');
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function animateText() {
+    const currentText = items[currentIndex].querySelector('.text');
+    currentText.style.opacity = 1;
+    currentText.style.transform = 'translateY(0)';
+}
+
+function verMas() {
+    alert("Ver más clickeado!");
+}
+
+setInterval(nextSlide, 10000);  // Cambia de imagen cada 3 segundos
+
+</script>
+
+<script>
+    const verMasButton = document.getElementById('ver-mas');
+
+    function scrollDown() {
+        const offersContainer = document.querySelector('#about');
+        offersContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY; // Obtiene la posición del scroll vertical
+        const windowHeight = window.innerHeight; // Altura de la ventana
+
+        // Si el scroll supera el 50% de la ventana, oculta el botón
+        if (scrollY > windowHeight / 2) {
+            verMasButton.classList.add('hidden');
+        } else {
+            verMasButton.classList.remove('hidden');
+        }
+    });
+</script>
+
+
+</html>

@@ -1,0 +1,337 @@
+@media (max-width: 1980px){
+    .dnone{
+        display: none;
+    }
+    body{
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    img.imagen-1 {
+        width: 130px;
+    }
+
+}
+
+
+@media (max-width: 1024px){
+
+    img.imagen-1 {
+        width: 130px;
+    }
+    
+    .nav-2 {
+        width: 75%;
+        display: flex;
+        gap: 45px;
+        justify-content: left;
+    }
+
+    .product-card {
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        padding: 20px;
+        text-align: center;
+        height: 400px;
+        display: flex
+    ;
+        flex-direction: column;
+        gap: 15px;
+        border: 1px solid #0000002b;
+        transition: 1s;
+    }
+
+    .products {
+        display: flex
+    ;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0px 0px 30px 0px;
+    }
+
+    .image-container {
+        width: 250px;
+        height: 600px;
+    }
+
+    .image-container:hover {
+        width: 270px;
+        height: 600px;
+    }
+
+    #guide{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 1024px){
+
+    img.imagen-1 {
+        width: 130px;
+    }
+
+    .image-container {
+        width: 210px;
+        height: 500px;
+    }
+
+    .image-container:hover {
+        width: 230px;
+        height: 500px;
+    }
+
+    #offers {
+        text-align: center;
+        padding: 20px;
+        display: flex
+    ;
+        justify-content: center;
+    }
+
+    .offers-container {
+        display: flex
+    ;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .f-1{
+        font-size: 20px;
+
+    }
+
+    #offers p {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media (max-width: 425px){
+    img.imagen-1 {
+        width: 100px;
+    }
+
+    .product-card {
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 160px;
+        padding: 20px;
+        text-align: center;
+        height: 320px;
+        display: flex
+;
+        flex-direction: column;
+        gap: 5px;
+        border: 1px solid #0000002b;
+        transition: 1s;
+    }
+
+    input#search-input {
+        width: 120px;
+    }
+
+    .nav-2 {
+        width: 75%;
+        display: flex;
+        gap: 5px;
+        justify-content: left;
+    }
+
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        height: 530px;
+        overflow: hidden;
+        top: 85px;
+    }
+
+    #imagen-1 {
+        width: 100%;
+        margin: auto;
+        height: 300px;
+        background-image: url(/img/856925037_243395070_1024x576.webp);
+        background-size: cover;
+        background-position: 0% 30%;
+        margin-top: 15px;
+    }
+
+    #about {
+        background: #724197;
+        width: 100%;
+        margin: auto;
+        color: white;
+        padding: 30px 0px 30px 0px;
+        text-align: center;
+    }
+
+    h2.text-1 {
+        position: relative;
+        top: 5px;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 500px;
+    }
+
+    .image-container:hover {
+        width: 100%;
+        height: 500px;
+    }
+
+    .offers-container {
+        display: flex
+;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: normal;
+    }
+
+    #offers {
+        text-align: center;
+        display: flex
+;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    #offers {
+        width: 100%;
+    }
+    
+    .offers-container {
+        display: flex;
+        flex-wrap: wrap; /* Permite que los elementos se ajusten */
+        justify-content: center; /* Centra los elementos horizontalmente */
+        gap: 16px; /* Espaciado entre elementos */
+    }
+    
+    .offer {
+        flex: 1 1 calc(33.33% - 16px); /* Tres columnas por defecto */
+        max-width: calc(33.33% - 16px);
+        box-sizing: border-box;
+    }
+    
+    .image-container {
+        position: relative;
+        width: 100%;
+    }
+    
+    .Imagen {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .overlay:hover {
+        opacity: 1;
+    }
+
+
+    .offer {
+        flex: 1 1 100%; /* Toma todo el ancho */
+        max-width: 100%;
+    }
+
+    .btn-buscar {
+        background-color: white;
+        padding: 8.7px 15px;
+        border: none;
+        border: 2px solid #474747;
+        display: none;
+    }
+
+    input#search-input {
+        width: 180px;
+    }
+
+    .nav-2 {
+        width: 75%;
+        display: flex
+;
+        gap: 0px;
+        justify-content: left;
+    }
+
+    #cart {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100%;
+        background-color: #f8f9fa;
+        border-left: 1px solid #ddd;
+        padding: 20px;
+        overflow-y: auto;
+    }
+    
+    p.f-2 {
+        font-size: 14px;
+        padding: 16px;
+    }
+
+    h2.text-2 {
+        text-align: center;
+        font-size: 30px;
+    }
+    
+}
+
+@media (max-width: 425px){
+
+    .product-card {
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 135px;
+        padding: 20px;
+        text-align: center;
+        height: 300px;
+        display: flex
+    ;
+        flex-direction: column;
+        gap: 5px;
+        border: 1px solid #0000002b;
+        transition: 1s;
+    }
+
+    input#search-input {
+        width: 150px;
+    }
+
+    p.f-2 {
+        font-size: 14px;
+        padding: 16px;
+    }
+
+    h2.text-2 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+
+
+}
+
+
