@@ -574,6 +574,17 @@ footer {
     align-items: flex-start;
 }
 
+footer {
+    display: flex
+;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 20px;
+    flex-wrap: wrap;
+    z-index: 1;
+    position: absolute;
+}
+
 footer .footer-section {
     flex: 1;
     min-width: 250px;
