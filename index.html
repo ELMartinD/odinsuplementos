@@ -21,16 +21,21 @@
 </head>
 <body>
      <!-- Navbar -->
-     <nav> 
+     <nav>
         <div class="nav-1">
             <img class="imagen-1" src="img/2.png" alt="">
         </div>
         <div class="nav-2">
             <div class="search-container">
-                <input type="text" placeholder="Buscar productos..." id="search-input">
-                <button class="btn-buscar" onclick="searchProduct()">
-                    <img width="20" height="20" src="img/lupa.png" alt="search-more"/>
+                <input 
+                    type="text" 
+                    placeholder="Buscar productos..." 
+                    id="search-input">
+                <button class="btn-buscar" id="btn-buscar">
+                    <img width="20" height="20" src="img/lupa.png" alt="search-more" />
                 </button>
+                <!-- Contenedor para resultados -->
+                <div id="search-results" class="search-results"></div>
             </div>
             <a class="dnone" href="#about">Acerca de</a>
             <a class="dnone" href="#products">Productos</a>
@@ -39,6 +44,9 @@
             </a>
         </div>
     </nav>
+    
+    
+    
 
     <div class="carousel-container">
         <div class="carousel">
@@ -323,13 +331,7 @@
 
 </body>
 
-<script>
-    function searchProduct() {
-        const query = document.getElementById('search-input').value;
-        alert('Buscando: ' + query);
-        // Aquí puedes implementar la lógica de búsqueda real si lo deseas.
-    }
-</script>
+<script src="js/buscar.js"></script>
 
 <script src="js/carroucel.js"></script>
 
