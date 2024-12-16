@@ -146,6 +146,15 @@
         top: 85px;
     }
 
+    footer {
+        display: flex
+    ;
+        justify-content: space-between;
+        background-color: #f9f9f9;
+        padding: 12px;
+        flex-wrap: wrap;
+    }
+
     .search-results {
         position: absolute;
         top: 100%;
